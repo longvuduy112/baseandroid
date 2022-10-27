@@ -1,0 +1,28 @@
+buildscript {
+    ext.kotlin_version = '1.7.10'
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.1'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.21'
+        def nav_version = "2.5.1"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+
+    }
+}
+//$kotlin_version removed it to 1.5.31
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
